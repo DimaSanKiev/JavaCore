@@ -1,4 +1,4 @@
-package _bionic_university.task01;
+package _bionic_university._0_working_day;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
