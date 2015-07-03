@@ -8,9 +8,9 @@ public class EasterCalculator {
         EasterCalculator obj = new EasterCalculator();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyy");
 
-        for (int i = 2016; i < 2026; i++) {
-            System.out.println("Easter  in " + i + " will be on " + obj.getEasterDate(i).format(formatter));
-            System.out.println("Trinity in " + i + " will be on " + obj.getEasterDate(i).plusWeeks(7).format(formatter));
+        for (int year = 2016; year < 2026; year++) {
+            System.out.println("Easter  in " + year + " will be on " + obj.getEasterDate(year).format(formatter));
+            System.out.println("Trinity in " + year + " will be on " + obj.getEasterDate(year).plusWeeks(7).format(formatter));
             System.out.println();
         }
     }
