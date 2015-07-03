@@ -1,4 +1,4 @@
-package _bionic_university._1_bank;
+package _bionic_university._2_bank;
 
 import java.time.LocalDate;
 
