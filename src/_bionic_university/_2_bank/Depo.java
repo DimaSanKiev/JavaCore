@@ -3,7 +3,7 @@ package _bionic_university._2_bank;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-public class Depo implements IncomeInterface {
+public class Depo implements IncomeInterface, Comparable<Depo> {
 	private LocalDate startDate;
 	private int dayLong;
 	private double sum;
@@ -79,4 +79,12 @@ public class Depo implements IncomeInterface {
 		this.interestRate = interestRate;
 	}
 
+	@Override
+	public int compareTo(Depo depo) {
+		if (this.getIncome() - depo.getIncome() > 0)
+			return 1;
+		if (this.getIncome() - depo.getIncome() < 0)
+			return -1;
+		return 0;
+	}
 }
