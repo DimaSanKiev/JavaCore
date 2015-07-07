@@ -7,14 +7,14 @@ import static org.junit.Assert.assertEquals;
 public class DictionaryTest {
 
     @Test
-    public void test1() {
+    public void testTranslate() {
         Dictionary dict = new Dictionary();
         dict.init();
         assertEquals(dict.getTransl("Save"), "Запоминть");
     }
 
     @Test
-    public void test2() {
+    public void testNull() {
         Dictionary dict = new Dictionary();
         dict.init();
         assertEquals(dict.getTransl("Ok"), "Ok");
