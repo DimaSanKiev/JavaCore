@@ -14,9 +14,13 @@ public class ArrayListVsLinkedList {
     public static void main(String[] args) {
         ArrayListVsLinkedList test = new ArrayListVsLinkedList();
         test.init(10000);
-        System.out.println(" Amount      ArrayList      LinkedList ");
+        System.out.println(" Amount      ArrayList, ms      LinkedList, ms       Ratio");
         for (int i = 100; i <= 100000; i = i * 10) {
-            System.out.format("  %1$4d  %2$10d      %3$10d    %n", i, test.addToMiddle(arrayList, i), test.addToMiddle(linkedList, i));
+            int amount = (int) (i + Math.sqrt(i));
+            double timeAL = test.addToMiddle(arrayList, i);
+            double timeLL = test.addToMiddle(linkedList, i);
+            double ratio = timeAL / timeLL;
+            System.out.format("  %1$4d  %2$10d            %3$10d          ~%4$f %n", amount, (int)timeAL, (int)timeLL, ratio);
         }
     }
 
