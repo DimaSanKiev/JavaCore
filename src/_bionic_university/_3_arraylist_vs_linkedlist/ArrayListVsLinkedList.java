@@ -14,12 +14,12 @@ public class ArrayListVsLinkedList {
     public static void main(String[] args) {
         ArrayListVsLinkedList test = new ArrayListVsLinkedList();
         test.init(10000);
-        System.out.println(" Amount      ArrayList, ms      LinkedList, ms       Ratio, (AL/LL)");
+        System.out.println(" Amount      ArrayList, ns      LinkedList, ns       Ratio (AL/LL), %");
         for (int i = 100; i <= 100000; i = i * 10) {
             int amount = (int) (i + Math.sqrt(i));
             double timeAL = test.addToMiddle(arrayList, i);
             double timeLL = test.addToMiddle(linkedList, i);
-            double ratio = timeAL / timeLL;
+            double ratio = timeAL / timeLL * 100;
             System.out.format("  %1$4d  %2$10d            %3$10d              ~%4$f %n", amount, (int)timeAL, (int)timeLL, ratio);
         }
     }
@@ -37,7 +37,7 @@ public class ArrayListVsLinkedList {
             list.add(list.size() / 2, generateRandom());
         }
         long tac = System.nanoTime();
-        return (tac - tic) / 1_000_000;
+        return (tac - tic) /*/ 1_000_000*/;
     }
 
     public int generateRandom() {

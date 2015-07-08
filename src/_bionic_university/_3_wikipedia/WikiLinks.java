@@ -3,18 +3,21 @@ package _bionic_university._3_wikipedia;
 import java.util.*;
 
 // https://en.wikipedia.org/wiki/Hibernate_(Java)
-public class Wikipedia {
+public class WikiLinks {
 
     public static void main(String[] args) {
-        Wikipedia test = new Wikipedia();
-        test.listInit();
-//        for (List l : )
+        Map<String, Integer> map = frequencyInit(listInit());
+//        System.out.println(map);
+        ValuesComparator comparator = new ValuesComparator(map);
+        Map<String, Integer> sortedMap = new TreeMap<>(comparator);
+        sortedMap.putAll(map);
+        System.out.println("If you want to study Hibernate you should start with such the most important topics:");
+        System.out.println(sortedMap);
+
     }
 
-    List<String> allLinks = listInit();
-
     // List for all links on the webpage
-    public List<String> listInit() {
+    static List<String> listInit() {
         List<String> links = new ArrayList<>();
         links.add("object-relational mapping");
         links.add("domain model");
@@ -53,8 +56,16 @@ public class Wikipedia {
     }
 
     // Map for links on this page, key = link name, value = frequency
-    public Map<String, Integer> init() {
+    static Map<String, Integer> frequencyInit(List<String> list) {
         Map<String, Integer> links = new HashMap<>();
+
+        for (String listItem : list) {
+            if (!links.containsKey(listItem)) {
+                links.put(listItem, 1);
+            } else {
+                links.put(listItem, links.get(listItem) + 1);
+            }
+        }
 
         return links;
     }
