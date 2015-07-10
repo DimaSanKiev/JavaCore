@@ -2,6 +2,7 @@ package _bionic_university._2_bank;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Comparator;
 
 public class Depo implements IncomeInterface, Comparable<Depo> {
     private LocalDate startDate;
@@ -84,5 +85,13 @@ public class Depo implements IncomeInterface, Comparable<Depo> {
         if ((this.getIncome() - depo.getIncome()) > 0) return 1;
         if ((this.getIncome() - depo.getIncome()) < 0) return -1;
         return 0;
+    }
+
+    public static class DepoComparator implements Comparator<Depo> {
+        public int compare(Depo depo1, Depo depo2){
+            if (depo1.getSum() > depo2.getSum()) return 1;
+            if (depo1.getSum() < depo2.getSum()) return -1;
+            return 0;
+        }
     }
 }

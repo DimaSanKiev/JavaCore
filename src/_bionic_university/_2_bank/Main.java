@@ -22,6 +22,16 @@ public class Main {
         for (Depo depo : list1) {
             System.out.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
         }
+        System.out.println();
+
+        DepoList test2 = new DepoList ();
+        test2.init();
+        ArrayList<Depo> list2 = test2.getList();
+        Collections.sort(list2, new Depo.DepoComparator());
+        for (Depo depo: list2) {
+            System.out.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
+        }
+        System.out.println();
 
     }
 }
