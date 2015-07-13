@@ -49,4 +49,11 @@ public class Article {
     public void setInnerArticles(List<Link> innerArticles) {
         this.innerArticles = innerArticles;
     }
+
+    @Override
+    public String toString() {
+        return "Article name: " + this.name + "\n" +
+                "URL: " + this.url + "\n" +
+                "Description: " + this.description + "\n";
+    }
 }

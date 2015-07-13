@@ -12,6 +12,7 @@ public class Main {
         hibernate.setDescription("Hibernate ORM is an object-relational mapping framework for the Java language, providing a framework for mapping an object-oriented domain model to a traditional relational database.");
         List<Link> links = addLinks();
         Collections.sort(links, new LinkComparator());
+        System.out.println(hibernate);
         links.forEach(System.out::println);
     }
 
