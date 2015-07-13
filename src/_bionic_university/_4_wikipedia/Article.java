@@ -3,7 +3,6 @@ package _bionic_university._4_wikipedia;
 import java.util.List;
 
 public class Article {
-
     private String name;
     private String url;
     private String description;
