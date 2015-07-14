@@ -1,0 +1,5 @@
+Save`Запомнить
+Remove`Удалить
+Cancel`Прервать
+Create`Создать
+Ok`

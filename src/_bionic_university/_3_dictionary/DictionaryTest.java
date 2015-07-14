@@ -1,4 +1,4 @@
-package _bionic_university._3_collections;
+package _bionic_university._3_dictionary;
 
 import org.junit.Test;
 
