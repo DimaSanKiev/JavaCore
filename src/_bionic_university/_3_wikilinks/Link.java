@@ -1,7 +1,7 @@
 package _bionic_university._3_wikilinks;
 
 public class Link{
-    public enum Status{NO, INPROGRESS, FINISHED};
+    public enum Status{NO, IN_PROGRESS, FINISHED}
 
     private static int newId = 0;
 

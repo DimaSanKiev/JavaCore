@@ -46,9 +46,9 @@ public class TestLinksCollect {
 
     @Test
     public void test4SetLinksProc() {
-        collect.setLinksProc(2, Link.Status.INPROGRESS);
+        collect.setLinksProc(2, Link.Status.IN_PROGRESS);
         Link l = collect.getById(2);
-        assertEquals(Link.Status.INPROGRESS, l.getLinksProc());
+        assertEquals(Link.Status.IN_PROGRESS, l.getLinksProc());
     }
 
     @Test
