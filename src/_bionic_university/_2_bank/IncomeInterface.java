@@ -1,5 +1,8 @@
 package _bionic_university._2_bank;
 
 public interface IncomeInterface {
-	public double getIncome();
+
+	double getIncome();
+
+	double getSum();
 }

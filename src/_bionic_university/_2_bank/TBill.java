@@ -24,6 +24,11 @@ public class TBill implements IncomeInterface {
 		return income;
 	}
 
+	@Override
+	public double getSum() {
+		return amount;
+	}
+
 	public double getNominal() {
 		return nominal;
 	}
