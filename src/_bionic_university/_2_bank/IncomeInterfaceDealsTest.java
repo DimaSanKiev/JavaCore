@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class IncomeInterfaceStorageTest {
+public class IncomeInterfaceDealsTest {
 
     @Test
     public void getIncomeSumTest() {
-        IncomeInterfaceStorage storage = new IncomeInterfaceStorage();
+        IncomeInterfaceDeals storage = new IncomeInterfaceDeals();
         ArrayList<IncomeInterface> list;
         list = storage.initList();
         double sum = storage.getIncomeSum(list);
@@ -19,16 +19,16 @@ public class IncomeInterfaceStorageTest {
 
     @Test
     public void getPrincipalSumTest() {
-        IncomeInterfaceStorage storage = new IncomeInterfaceStorage();
+        IncomeInterfaceDeals storage = new IncomeInterfaceDeals();
         ArrayList<IncomeInterface> list;
         list = storage.initList();
         double sum = storage.getPrincipalSum(list);
-        assertEquals(5500.0, sum);
+        assertEquals(1439000.0, sum);
     }
 
     @Test
     public void listSizeTest() {
-        IncomeInterfaceStorage storage = new IncomeInterfaceStorage();
+        IncomeInterfaceDeals storage = new IncomeInterfaceDeals();
         ArrayList<IncomeInterface> list;
         list = storage.initList();
         assertEquals(6, list.size());

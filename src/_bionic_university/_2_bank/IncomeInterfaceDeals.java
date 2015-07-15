@@ -4,10 +4,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IncomeInterfaceStorage {
+public class IncomeInterfaceDeals {
+    ArrayList<IncomeInterface> list = new ArrayList<>();
 
     public ArrayList initList() {
-        ArrayList<IncomeInterface> list = new ArrayList<>();
         list.add(new Depo(LocalDate.of(2012, 9, 8), 20, 1000.0, 15.0));
         list.add(new Depo(LocalDate.of(2012, 9, 8), 180, 1000.0, 15.0));
         list.add(new Depo(LocalDate.of(2014, 9, 8), 20, 1000.0, 15.0));
