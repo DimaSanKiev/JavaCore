@@ -1,10 +1,13 @@
 package _bionic_university._2_bank;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
 
-public class Depo implements IncomeInterface, Comparable<Depo> {
+public class Depo implements IncomeInterface, Comparable<Depo>, Serializable {
+    private static final long serialVersionUID = 9165906448584120184L;
+
     private LocalDate startDate;
     private int dayLong;
     private double sum;

@@ -1,5 +1,8 @@
 package _bionic_university._2_bank;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -36,6 +39,14 @@ public class DepoList {
 
     public ArrayList<Depo> getList() {
         return list;
+    }
+
+    public void save(String fileId) {
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileId));) {
+            for (Depo depo : list) out.writeObject(depo);
+        } catch (IOException ei) {
+            System.out.println(ei.getMessage());
+        }
     }
 
 }
