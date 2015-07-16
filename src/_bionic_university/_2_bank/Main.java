@@ -1,12 +1,33 @@
 package _bionic_university._2_bank;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+        Path path = Paths.get("depo.txt");
 
+        DepoList test0 = new DepoList();
+        test0.init();
+        ArrayList<Depo> list0 = test0.getList();
+        Collections.sort(list0);
+
+        for (Depo depo : list0) {
+            System.out.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
+            String str = String.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
+            try {
+                Files.write(path, str.getBytes(), StandardOpenOption.APPEND);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println();
+/*
         // Comparable
         DepoList test0 = new DepoList();
         test0.init();
@@ -107,6 +128,6 @@ public class Main {
                 .filter(d -> d.getSum() > 10000.0)
                 .collect(Collectors.toList());
         largeSum.forEach(d -> System.out.format("sum = %1$8.2f   interest = %2$7.2f\n", d.getSum(), d.getIncome()));
-
+    */
     }
 }
