@@ -1,7 +1,7 @@
 package _bionic_university._3_wikilinks;
 
-public class Link{
-    public enum Status{NO, IN_PROGRESS, FINISHED}
+public class Link {
+    public enum Status {NO, IN_PROGRESS, FINISHED}
 
     private static int newId = 0;
 
@@ -12,11 +12,11 @@ public class Link{
     private Status studyProc;
     private int priority;
 
-    public Link(){
+    public Link() {
         id = ++newId;
     }
 
-    public Link(String link, String name){
+    public Link(String link, String name) {
         id = ++newId;
         this.link = link;
         this.name = name;
@@ -82,12 +82,12 @@ public class Link{
     }
 
     @Override
-    public boolean equals(Object l){
-        return this.link.equals(((Link)l).getLink());
+    public boolean equals(Object l) {
+        return this.link.equals(((Link) l).getLink());
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return link.hashCode();
     }
 }

@@ -1,6 +1,6 @@
 package _bionic_university._4_wikipedia;
 
-public class Link  implements Comparable<Link>{
+public class Link implements Comparable<Link> {
     private String name;
     private String url;
     private String description;
