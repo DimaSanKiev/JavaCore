@@ -2,7 +2,6 @@ package _bionic_university._2_bank;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
@@ -10,8 +9,6 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        Path path = Paths.get("depo.txt");
-
         DepoList test0 = new DepoList();
         test0.init();
         ArrayList<Depo> list0 = test0.getList();
@@ -21,7 +18,7 @@ public class Main {
             System.out.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
             String str = String.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
             try {
-                Files.write(path, str.getBytes(), StandardOpenOption.APPEND);
+                Files.write(Paths.get("depo.txt"), str.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } catch (IOException e) {
                 e.printStackTrace();
             }
