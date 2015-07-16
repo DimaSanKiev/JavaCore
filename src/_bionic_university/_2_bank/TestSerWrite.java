@@ -1,6 +1,6 @@
 package _bionic_university._2_bank;
 
-public class TestSerialization {
+public class TestSerWrite {
 
     public static void main(String[] args) {
         DepoList test = new DepoList();

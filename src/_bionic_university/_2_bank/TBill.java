@@ -1,8 +1,11 @@
 package _bionic_university._2_bank;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class TBill implements IncomeInterface {
+public class TBill implements IncomeInterface, Serializable {
+	private static final long serialVersionUID = -3036194919432654481L;
+
 	private double nominal;
 	private double price;
 	private int amount;
