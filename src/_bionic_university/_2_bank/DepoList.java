@@ -42,7 +42,8 @@ public class DepoList {
 
     public void save(String fileId) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileId));) {
-            for (Depo depo : list) out.writeObject(depo);
+            for (Depo depo : list)
+                out.writeObject(depo);
         } catch (IOException ei) {
             System.out.println(ei.getMessage());
         }

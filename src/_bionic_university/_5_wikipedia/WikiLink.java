@@ -1,6 +1,10 @@
 package _bionic_university._5_wikipedia;
 
-public class WikiLink {
+import java.io.Serializable;
+
+public class WikiLink implements Serializable {
+    private static final long serialVersionUID = 731150693236262564L;
+
     public enum Status {NO, IN_PROGRESS, FINISHED}
 
     private static int count = 0;

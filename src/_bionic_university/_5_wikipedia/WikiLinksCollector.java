@@ -1,5 +1,6 @@
 package _bionic_university._5_wikipedia;
 
+import java.io.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -69,4 +70,30 @@ public class WikiLinksCollector {
         if (id > count)
             count = id;
     }
+    
+    public void save(String file) {
+        list.clear();
+        try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
+            for (WikiLink link : list) {
+                out.writeObject(link);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void read(String file) {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            while (true) {
+                WikiLink link = (WikiLink) in.readObject();
+                list.add(link);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Input file " + file + " structure corrupted.");
+        } catch (IOException ignore) {
+        }
+    }
+
 }
