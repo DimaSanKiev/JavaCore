@@ -4,5 +4,5 @@ public interface IncomeInterface {
 
 	double getIncome();
 
-	double getSum();
+	double getPrincipal();
 }

@@ -48,6 +48,11 @@ public class Depo implements IncomeInterface, Comparable<Depo> {
         return interest;
     }
 
+    @Override
+    public double getPrincipal() {
+        return sum;
+    }
+
     public LocalDate getStartDate() {
         return startDate;
     }

@@ -20,7 +20,7 @@ public class IncomeInterfaceDeals {
     public double getPrincipalSum(List<? extends IncomeInterface> deals) {
         double sum = 0.0;
         for (IncomeInterface d : deals) {
-            sum += d.getSum();
+            sum += d.getPrincipal();
         }
         return sum;
     }
