@@ -15,8 +15,8 @@ public class Main {
         Collections.sort(list0);
 
         for (Depo depo : list0) {
-            System.out.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
             String str = String.format("sum = %1$8.2f   interest =  %2$7.2f\n", depo.getSum(), depo.getIncome());
+            System.out.format(str);
             try {
                 Files.write(Paths.get("depo.txt"), str.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             } catch (IOException e) {
