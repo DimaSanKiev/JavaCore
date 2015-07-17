@@ -12,7 +12,6 @@ public class WikiLink implements Serializable {
     private int id;
     private String url;
     private String name;
-    private String description;
     private Status linkProc;
     private Status studyProc;
     private int priority;
@@ -62,14 +61,6 @@ public class WikiLink implements Serializable {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public Status getLinkProc() {
         return linkProc;
     }
@@ -102,5 +93,12 @@ public class WikiLink implements Serializable {
     @Override
     public int hashCode() {
         return url.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.id + "; Link name: " + this.name + "; Link Process: " +
+                this.linkProc + "; Study Process: " + this.studyProc + "\n" +
+                "URL: " + this.url + "\n";
     }
 }

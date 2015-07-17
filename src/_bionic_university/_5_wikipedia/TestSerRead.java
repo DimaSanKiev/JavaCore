@@ -1,10 +1,14 @@
 package _bionic_university._5_wikipedia;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class TestSerRead {
     public static void main(String[] args) {
         WikiLinksCollector test = new WikiLinksCollector();
         test.read("links.txt");
-        System.out.println(test.getList());
-        System.out.println(test.getById(1));
+        Set<WikiLink> list = new HashSet<>();
+        list.addAll(test.getList());
+        list.forEach(System.out::println);
     }
 }

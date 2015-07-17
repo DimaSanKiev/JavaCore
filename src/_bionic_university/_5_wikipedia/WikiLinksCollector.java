@@ -62,7 +62,6 @@ public class WikiLinksCollector {
             oldLink.setId(link.getId());
             oldLink.setUrl(link.getUrl());
             oldLink.setName(link.getName());
-            oldLink.setDescription(link.getDescription());
             oldLink.setLinkProc(link.getLinkProc());
             oldLink.setStudyProc(link.getStudyProc());
             oldLink.setPriority(link.getPriority());
