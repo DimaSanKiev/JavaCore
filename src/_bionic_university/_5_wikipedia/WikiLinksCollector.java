@@ -70,9 +70,8 @@ public class WikiLinksCollector {
         if (id > count)
             count = id;
     }
-    
+
     public void save(String file) {
-        list.clear();
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             for (WikiLink link : list) {
                 out.writeObject(link);
@@ -95,5 +94,4 @@ public class WikiLinksCollector {
         } catch (IOException ignore) {
         }
     }
-
 }
