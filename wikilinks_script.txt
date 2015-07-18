@@ -1,0 +1,10 @@
+WikiLink()
+  .add()
+    .url("https://en.wikipedia.org/wiki/Plain_Old_Java_Object")
+    .name("POJO")
+
+WikiLink()
+  .get(id)
+    .setPriority()
+    .setLinkProc()
+    .setStudyProc()
