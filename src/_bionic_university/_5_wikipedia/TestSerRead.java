@@ -6,7 +6,7 @@ import java.util.Set;
 public class TestSerRead {
     public static void main(String[] args) {
         WikiLinksCollector test = new WikiLinksCollector();
-        test.read("wikilinks.dat");
+        test.read();
         Set<WikiLink> list = new HashSet<>();
         list.addAll(test.getList());
         list.forEach(System.out::println);

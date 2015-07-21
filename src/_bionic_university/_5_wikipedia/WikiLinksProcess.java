@@ -31,7 +31,7 @@ public class WikiLinksProcess {
                             outF.println(" New link was added with id = " + id);
                             break;
                         case "report":
-                            links.createHtml(ops[1]);
+                            links.createHtml("files/" + ops[1]);
                             break;
                         default:
                             outF.println("   ERROR! Undefined operation.");

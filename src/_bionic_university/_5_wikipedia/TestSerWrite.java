@@ -6,7 +6,7 @@ public class TestSerWrite {
         test.addLink("https://en.wikipedia.org/wiki/Object-relational_mapping", "ORM");
         test.addLink("https://en.wikipedia.org/wiki/SQL", "SQL");
         test.addLink("https://en.wikipedia.org/wiki/Java_Persistence_API", "JPA");
-        test.save("files/wikilinks.dat");
+        test.save();
         System.out.println("WikiLinks list has been saved");
     }
 }
