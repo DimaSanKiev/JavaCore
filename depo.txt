@@ -1,5 +1,0 @@
-sum =  2500,00   interest =    75,21
-sum = 10000,00   interest =  1041,37
-sum =  5500,00   interest =    69,16
-sum = 43000,00   interest =  8526,02
-sum = 12000,00   interest =   478,68

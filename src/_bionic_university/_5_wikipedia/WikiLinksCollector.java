@@ -20,6 +20,10 @@ public class WikiLinksCollector {
             WikiLink.setCount(count);
     }
 
+    public void addLink(WikiLink wikiLink) {
+        wikiLink = new WikiLink();
+    }
+
     public Set<WikiLink> getList() {
         return list;
     }
@@ -93,4 +97,6 @@ public class WikiLinksCollector {
         } catch (IOException ignore) {
         }
     }
+
+
 }

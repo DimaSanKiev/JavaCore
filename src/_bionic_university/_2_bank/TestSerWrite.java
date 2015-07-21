@@ -5,7 +5,7 @@ public class TestSerWrite {
     public static void main(String[] args) {
         DepoList test = new DepoList();
         test.init();
-        test.save("Depo.txt");
+        test.save("files/Depo.txt");
         System.out.println("Deposit list has been saved");
     }
 
