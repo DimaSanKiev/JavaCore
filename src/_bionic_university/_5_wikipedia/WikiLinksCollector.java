@@ -7,6 +7,7 @@ import java.util.Set;
 public class WikiLinksCollector {
     private static int count = 0;
     private Set<WikiLink> list = null;
+    private String file = "files/wikilinks.dat";
 
     public WikiLinksCollector() {
         list = new HashSet<WikiLink>();
@@ -71,7 +72,7 @@ public class WikiLinksCollector {
             count = id;
     }
 
-    public void save(String file) {
+    public void save() {
         try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             for (WikiLink link : list) {
                 out.writeObject(link);
@@ -81,7 +82,7 @@ public class WikiLinksCollector {
         }
     }
 
-    public void read(String file) {
+    public void read() {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             while (true) {
                 WikiLink link = (WikiLink) in.readObject();
