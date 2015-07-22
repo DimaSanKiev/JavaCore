@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.schema:APP</OriginalElement>
+  <nodes>
+    <node x="229.0" y="0.0">dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.MERCHANT</node>
+    <node x="361.25" y="409.0">dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.TRANSMONEY</node>
+    <node x="52.25" y="382.0">dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.PAYMENT</node>
+    <node x="0.0" y="54.0">dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.CUSTOMER</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.PAYMENT" target="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.MERCHANT">
+      <point x="52.25" y="-112.0" />
+      <point x="209.0" y="357.0" />
+      <point x="301.25" y="357.0" />
+      <point x="-72.25" y="166.0" />
+    </edge>
+    <edge source="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.TRANSMONEY" target="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.MERCHANT">
+      <point x="0.0" y="-85.0" />
+      <point x="72.25" y="166.0" />
+    </edge>
+    <edge source="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.PAYMENT" target="dc28e70c-37f2-4f9b-b7a8-4e9de1d7ac54.table:APP.CUSTOMER">
+      <point x="-52.25" y="-112.0" />
+      <point x="0.0" y="112.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="265.5" y="303.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
