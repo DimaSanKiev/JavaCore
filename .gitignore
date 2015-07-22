@@ -3,3 +3,4 @@ lib
 out
 JavaCore.iml
 MyDB
+derby.log
