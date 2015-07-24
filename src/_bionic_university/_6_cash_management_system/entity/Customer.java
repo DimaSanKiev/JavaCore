@@ -1,10 +1,15 @@
 package _bionic_university._6_cash_management_system.entity;
 
+import java.sql.Date;
+
 public class Customer {
     private int id;
     private String name;
     private String address;
     private String email;
+    private String cardNum;
+    private String cardType;
+    private Date maturity;
 
     public Customer() {
     }
@@ -39,5 +44,29 @@ public class Customer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCardNum() {
+        return cardNum;
+    }
+
+    public void setCardNum(String cardNum) {
+        this.cardNum = cardNum;
+    }
+
+    public String getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
+    }
+
+    public Date getMaturity() {
+        return maturity;
+    }
+
+    public void setMaturity(Date maturity) {
+        this.maturity = maturity;
     }
 }
