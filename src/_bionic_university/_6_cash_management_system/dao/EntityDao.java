@@ -1,17 +1,18 @@
 package _bionic_university._6_cash_management_system.dao;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 public interface EntityDao<T> {
 
-    List<T> selectAll() throws SQLException;
+    List<T> selectAll() throws SQLException, IOException;
 
-    void create(T object) throws SQLException;
+    void create(T object) throws SQLException, IOException;
 
-    T readById(int id) throws SQLException;
+    T selectById(int id) throws SQLException, IOException;
 
-    void updateById(T object, int id) throws SQLException;
+    void updateById(T object, int id) throws SQLException, IOException;
 
-    int deleteById(int id) throws SQLException;
+    void deleteById(int id) throws SQLException, IOException;
 }
