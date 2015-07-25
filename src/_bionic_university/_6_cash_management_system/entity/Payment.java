@@ -1,12 +1,12 @@
 package _bionic_university._6_cash_management_system.entity;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Payment {
     private int id;
     private Date date;
-    private Customer customer;
-    private Merchant merchant;
+    private int customerId;
+    private int merchantId;
     private String goodsDesc;
     private double sumPayed;
     private double chargePayed;
@@ -30,20 +30,20 @@ public class Payment {
         this.date = date;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public Merchant getMerchant() {
-        return merchant;
+    public int getMerchantId() {
+        return merchantId;
     }
 
-    public void setMerchant(Merchant merchant) {
-        this.merchant = merchant;
+    public void setMerchantId(int merchantId) {
+        this.merchantId = merchantId;
     }
 
     public String getGoodsDesc() {
@@ -68,5 +68,12 @@ public class Payment {
 
     public void setChargePayed(double chargePayed) {
         this.chargePayed = chargePayed;
+    }
+
+    public String toString() {
+        String txt = "id = " + id + ";   date = '" + date + "';   merchant_id = ";
+        txt += "" + merchantId + ";   customer_id = " + customerId;
+        txt += ";   sum_payed = " + sumPayed + ";   charge_payed = " + chargePayed;
+        return txt;
     }
 }

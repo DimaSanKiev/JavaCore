@@ -69,4 +69,10 @@ public class Customer {
     public void setMaturity(Date maturity) {
         this.maturity = maturity;
     }
+
+    public String toString() {
+        String txt = "id = " + id + ";   name = '" + name + "';   address = ";
+        txt += "" + address + ";   email = " + email;
+        return txt;
+    }
 }

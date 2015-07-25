@@ -98,7 +98,7 @@ public class Merchant {
         this.sent = sent;
     }
 
-    public Date getLaseSent() {
+    public Date getLastSent() {
         return laseSent;
     }
 
