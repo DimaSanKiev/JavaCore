@@ -40,6 +40,28 @@ public class DepoList {
         return list;
     }
 
+    public int size() {
+        return list.size();
+    }
+
+    public double getSum(int index) {
+        return list.get(index).getSum();
+    }
+
+    public void setSum(int index, double sum) {
+        list.get(index).setSum(sum);
+    }
+
+    public synchronized void add100(int index) {
+        double tempSum = list.get(index).getSum();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        list.get(index).setSum(tempSum + 100);
+    }
+
     public void save(String fileId) {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileId));) {
             for (Depo depo : list)
