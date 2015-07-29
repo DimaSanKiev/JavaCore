@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class MerchList {
+public class MerchantList {
 
     public static void main(String[] args) {
         try{

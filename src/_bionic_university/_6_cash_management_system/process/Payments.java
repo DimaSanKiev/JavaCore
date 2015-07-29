@@ -64,9 +64,7 @@ public class Payments {
     public static double getCharge(Connection conn, int merchantId)
             throws SQLException {
         Statement stmt = conn.createStatement();
-        ResultSet rs = stmt
-                .executeQuery("SELECT charge FROM merchant where id = "
-                        + merchantId);
+        ResultSet rs = stmt.executeQuery("SELECT charge FROM merchant where id = "+ merchantId);
         if (!rs.next())
             return -1.0;
         double ret = rs.getDouble("charge");
@@ -78,8 +76,7 @@ public class Payments {
     public static Connection getConnection() throws IOException, SQLException {
         Connection conn;
         Properties props = new Properties();
-        InputStreamReader in = new InputStreamReader(new FileInputStream(
-                "files\\appProperties.txt"), "UTF-8");
+        InputStreamReader in = new InputStreamReader(new FileInputStream("files\\appProperties.txt"), "UTF-8");
         props.load(in);
         in.close();
 
