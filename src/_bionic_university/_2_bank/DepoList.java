@@ -52,14 +52,12 @@ public class DepoList {
         list.get(index).setSum(sum);
     }
 
-    public synchronized void add100(int index) {
-        double tempSum = list.get(index).getSum();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        list.get(index).setSum(tempSum + 100);
+    public synchronized void add100(int index) throws InterruptedException {
+        Depo depo = list.get(index);
+        double sum = depo.getSum();
+        Thread.sleep(1000);
+        sum += 100.0;
+        depo.setSum(sum);
     }
 
     public void save(String fileId) {

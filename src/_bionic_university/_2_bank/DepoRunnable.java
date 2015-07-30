@@ -25,7 +25,7 @@ public class DepoRunnable implements Runnable {
         }
     }
 
-    private void add100() {
+    private void add100() throws InterruptedException {
         for (int i = 0; i < depoList.size(); i++) {
             depoList.add100(i);
         }
