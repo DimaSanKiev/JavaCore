@@ -1,4 +1,4 @@
-package _bionic_university._7_concurrency;
+package _bionic_university._7_concurrency._1_test_race;
 
 public class TestRace {
 
