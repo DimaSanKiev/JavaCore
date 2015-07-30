@@ -13,6 +13,7 @@ public class DepoRunnable implements Runnable {
         for (int i = 0; i < depoList.size(); i++) {
             synchronized (depoList) {
                 sum = depoList.getSum(i);
+                System.out.println(depoList.getSum(i));
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
