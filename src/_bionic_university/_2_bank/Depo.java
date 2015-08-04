@@ -16,8 +16,7 @@ public class Depo implements IncomeInterface, Comparable<Depo>, Serializable {
     public Depo() {
     }
 
-    public Depo(LocalDate startDate, int dayLong, double sum,
-                double interestRate) {
+    public Depo(LocalDate startDate, int dayLong, double sum, double interestRate) {
         this.startDate = startDate;
         this.dayLong = dayLong;
         this.sum = sum;
